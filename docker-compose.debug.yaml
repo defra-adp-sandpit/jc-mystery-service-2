@@ -1,0 +1,3 @@
+services:
+  jc-mystery-service-2:
+    command: npm run start:debug

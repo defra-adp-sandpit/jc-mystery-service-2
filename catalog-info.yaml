@@ -1,0 +1,36 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: jc-mystery-service-2
+  description: JC mystery service
+  annotations:
+    github.com/project-slug: defra-adp-sandpit/jc-mystery-service-2
+    dev.azure.com/project: DEFRA-ADP
+    dev.azure.com/build-definition: jc-mystery-service-2
+    sonarqube.org/project-key: jc-mystery-service-2
+    grafana/dashboard-selector: "folderTitle == 'Managed Prometheus'"
+    backstage.io/kubernetes-id: jc-mystery-service-2
+  links:
+    - url: https://github.com/defra-adp-sandpit/jc-mystery-service-2
+      title: GitHub Repository
+      icon: github
+    - url: https://dev.azure.com/defragovuk/DEFRA-ADP/
+      title: Azure DevOps Project
+      icon: project
+    - url: https://sonarcloud.io/project/overview?id=jc-mystery-service-2
+      title: SonarCloud Analysis
+      icon: check
+    - url: https://snyk.io/test/github/DEFRA/jc-mystery-service-2
+      title: Snyk Analysis
+      icon: policy
+    - url: https://portal.azure.com/defradev.onmicrosoft.com
+      title: Azure Portal - Defra Dev
+      icon: cloud
+    - url: https://portal.azure.com/Defra.onmicrosoft.com
+      title: Azure Portal - Defra
+      icon: cloud
+spec:
+  type: backend
+  lifecycle: alpha
+  owner: "group:default/fcp-demo"
+  

@@ -1,0 +1,19 @@
+services:
+  jc-mystery-service-2:
+    build:
+      context: .
+      target: production
+    image: jc-mystery-service-2
+    container_name: jc-mystery-service-2
+    depends_on:
+      - jc-mystery-service-2-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: jc-mystery-service-2-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+
+  jc-mystery-service-2-postgres:
+    image: postgres:11.4-alpine
+    environment:
+      POSTGRES_DB: jc-mystery-service-2
+      POSTGRES_PASSWORD: ppp
+      POSTGRES_USERNAME: postgres
